@@ -23,6 +23,7 @@
   </project>
   <object class="tk.Toplevel" id="toplevel1">
     <property name="height">100</property>
+    <property name="title" translatable="yes">FuriganaTAGs</property>
     <property name="width">500</property>
     <containerlayout manager="pack">
       <property name="propagate">false</property>
