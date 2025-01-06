@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.4" author="PygubuDesigner 0.39.3">
+  <project>
+    <settings>
+      <setting id="name">Furiganas</setting>
+      <setting id="description">permite poner furigana y translation como tags ruby HTML en el texto</setting>
+      <setting id="module_name">nombreModulo</setting>
+      <setting id="template">application</setting>
+      <setting id="main_widget">toplevel1</setting>
+      <setting id="main_classname">nombreClase</setting>
+      <setting id="main_menu" />
+      <setting id="output_dir" />
+      <setting id="output_dir2" />
+      <setting id="import_tkvariables">False</setting>
+      <setting id="use_ttk_styledefinition_file">False</setting>
+      <setting id="use_i18n">False</setting>
+      <setting id="all_ids_attributes">False</setting>
+      <setting id="generate_code_onsave">False</setting>
+      <setting id="use_window_centering_code">False</setting>
+      <setting id="ttk_style_definition_file" />
+    </settings>
+    <customwidgets />
+  </project>
+  <object class="tk.Toplevel" id="toplevel1">
+    <property name="height">100</property>
+    <property name="width">500</property>
+    <containerlayout manager="pack">
+      <property name="propagate">false</property>
+    </containerlayout>
+    <child>
+      <object class="ttk.Frame" id="frame1">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">x</property>
+          <property name="padx">2</property>
+          <property name="pady">2</property>
+          <property name="side">left</property>
+        </layout>
+        <child>
+          <object class="ttk.Entry" id="entry_furigana" named="True">
+            <property name="justify">center</property>
+            <layout manager="pack">
+              <property name="expand">true</property>
+              <property name="fill">x</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Text" id="text_kanji" named="True">
+            <property name="height">2</property>
+            <property name="setgrid">false</property>
+            <property name="state">normal</property>
+            <property name="width">50</property>
+            <layout manager="pack">
+              <property name="expand">false</property>
+              <property name="fill">x</property>
+              <property name="pady">2</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="entry_meaning" named="True">
+            <property name="justify">center</property>
+            <layout manager="pack">
+              <property name="fill">x</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Frame" id="frame2">
+        <property name="height">200</property>
+        <property name="width">50</property>
+        <layout manager="pack">
+          <property name="padx">2</property>
+          <property name="pady">2</property>
+          <property name="side">right</property>
+        </layout>
+        <child>
+          <object class="ttk.Button" id="button_limpiar" named="True">
+            <property name="command" type="command" cbtype="simple">on_limpiar_button_clicked</property>
+            <property name="text" translatable="yes">limpiar</property>
+            <property name="width">8</property>
+            <layout manager="pack">
+              <property name="padx">1</property>
+              <property name="pady">4</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button_ejecutar" named="True">
+            <property name="command" type="command" cbtype="simple">on_ejecutar_button_clicked</property>
+            <property name="text" translatable="yes">ejecutar</property>
+            <property name="width">8</property>
+            <layout manager="pack">
+              <property name="padx">1</property>
+              <property name="pady">4</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
