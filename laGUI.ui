@@ -22,7 +22,7 @@
     <customwidgets />
   </project>
   <object class="tk.Toplevel" id="toplevel1">
-    <property name="height">74</property>
+    <property name="height">84</property>
     <property name="title" translatable="yes">FuriganaTAGs</property>
     <property name="width">540</property>
     <containerlayout manager="pack">
@@ -94,7 +94,7 @@
         </child>
         <child>
           <object class="tk.Text" id="text_kanji" named="True">
-            <property name="height">1</property>
+            <property name="height">2</property>
             <property name="setgrid">false</property>
             <property name="state">normal</property>
             <property name="width">50</property>
