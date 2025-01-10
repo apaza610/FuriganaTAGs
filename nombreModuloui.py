@@ -29,17 +29,24 @@ class nombreClaseUI:
         self.furigana.delete(0, tk.END)
         self.kanji.delete("1.0", tk.END)
         self.meaning.delete(0, tk.END)
+        self.kanji.insert("1.0", pyperclip.paste())
 
     def on_ejecutar_button_clicked(self):
         cadenaUP = self.furigana.get()
-        cadenaMID = self.kanji.get("1.0",tk.END).strip()
+        cadenaMID = self.kanji.get("1.0",tk.END)
         cadenaDOWN = self.meaning.get()
 
         # "<ruby>日本語<rt>にほんご</rt><rtc>japones</rtc></ruby>"
         if cadenaDOWN != "":
-            cadena = f'<ruby>{cadenaMID}<rt>{cadenaUP}</rt><rtc>{cadenaDOWN}</rtc></ruby>'
+            cadena = f'<ruby>{cadenaMID.strip()}<rt>{cadenaUP}</rt><rtc>{cadenaDOWN}</rtc></ruby>'
+            print("dddddddddddddddd")
+        elif cadenaUP == "" and cadenaDOWN == "":
+            [linea1, linea2] = cadenaMID.splitlines()
+            cadena = f'<ruby>{linea1}<rt>{linea2}</rt></ruby>'
+            print("ddddddddddddddddeeeeeeeeeeeeee")
         else :
-            cadena = f'<ruby>{cadenaMID}<rt>{cadenaUP}</rt></ruby>'
+            cadena = f'<ruby>{cadenaMID.strip()}<rt>{cadenaUP}</rt></ruby>'
+            print("****************************")
         
         self.kanji.delete("1.0",tk.END)
         self.kanji.insert("1.0",cadena)
